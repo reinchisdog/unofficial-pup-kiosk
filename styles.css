@@ -1,0 +1,227 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    font-family    : Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font1: "Montserrat", serif;
+    --font2: "Hind", serif;
+}
+
+.navbar {
+    width           : 100%;
+    height          : 48px;
+    background-color: #821e1e;
+}
+
+.navbar h1 {
+    font-family   : var(--font1);
+    text-align    : center;
+    line-height   : 48px;
+    color         : whitesmoke;
+    letter-spacing: 0.1em;
+}
+
+.navbar h1 span {
+    color: rgb(244, 161, 161);
+}
+
+.header {
+    height         : 70vh;
+    width          : 100%;
+    position       : relative;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    overflow       : hidden;
+}
+
+.header .content {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    width          : 480px;
+    gap            : 1em;
+}
+
+.header h2 {
+    font-family   : var(--font1);
+    text-align    : center;
+    color         : #bb3939;
+    letter-spacing: 0.1em;
+    font-size     : 36px;
+}
+
+.header p {
+    font-family: var(--font2);
+    text-align : center;
+    color      : aliceblue;
+    font-size  : 16px;
+}
+
+.header select {
+    height       : 2.4em;
+    border-radius: 8px;
+    font-family  : var(--font2);
+    font-size    : 16px;
+    border       : 3px solid rgb(234, 234, 234);
+    padding      : 0 1em;
+    margin       : 1em 0;
+    width        : 80%;
+}
+
+.header .credits {
+    position: absolute;
+    bottom  : 0;
+}
+
+.header .background {
+    height    : 100%;
+    width     : 100%;
+    object-fit: cover;
+    position  : absolute;
+    top       : 0;
+    z-index   : -1;
+    filter    : blur(6px);
+    transform : scale(1.2);
+}
+
+.main {
+    display: flex;
+    height : 100vh;
+    width  : 100%;
+}
+
+.side-container {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    height          : 100%;
+    min-width       : 480px;
+    width           : 100%;
+    background-color: rgb(246, 246, 246);
+    padding         : 24px;
+    gap             : 24px;
+}
+
+.side-container>* {
+    width           : 100%;
+    background-color: white;
+    border-radius   : 12px;
+    padding         : 8px;
+    box-shadow      : 0 1px 4px rgb(195, 195, 195);
+    position        : relative;
+}
+
+.title-container {
+    font-size    : 24px;
+    min-height   : calc(2.4em + 32px);
+    border-radius: 12px;
+}
+
+.title-container h2 {
+    position   : absolute;
+    top        : 50%;
+    left       : 50%;
+    transform  : translate(-50%, -50%);
+    font-family: var(--font1);
+    font-size  : 24px;
+    color      : #821e1e;
+    text-align : center;
+    width      : calc(100% - 16px);
+    line-height: 1em;
+}
+
+.image-container {
+    min-height     : 360px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.image-container p {
+    text-align : center;
+    font-family: var(--font2);
+    color      : #bb3939;
+    width      : 80%;
+}
+
+.image-container img {
+    height       : 100%;
+    width        : 100%;
+    object-fit   : cover;
+    border-radius: 6px;
+}
+
+.image-container img::before {
+    content: none;
+}
+
+.desc-container {
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 16px;
+}
+
+.desc-container p {
+    text-align : center;
+    font-family: var(--font2);
+    color      : #bb3939;
+    line-height: 1.2em;
+}
+
+.map-container {
+    display         : flex;
+    justify-content : center;
+    position        : relative;
+    height          : 100%;
+    background-color: #821e1e;
+}
+
+
+.map-image {
+    height    : 100%;
+    object-fit: contain;
+}
+
+.areaNumber {
+    position        : absolute;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    transform       : translate(-50%, -50%);
+    text-align      : center;
+    min-width       : 32px;
+    min-height      : 32px;
+    background-color: white;
+    border-radius   : 100%;
+    transition      : all 0.2s ease-in-out;
+    pointer-events  : none;
+    border          : 2px solid #821e1e;
+    color           : #821e1e;
+    box-shadow      : 0 1px 4px rgb(0, 0, 0);
+}
+
+.active {
+    background-color: #821e1e;
+    color           : white;
+    min-width       : 40px;
+    min-height      : 40px;
+    border          : 3px solid white;
+    box-shadow      : 0 2px 12px white;
+}
